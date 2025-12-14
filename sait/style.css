@@ -1,0 +1,299 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Навигация */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+    border: 2px solid #2c3e50;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Секции */
+section {
+    padding: 100px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section:nth-child(even) {
+    background-color: white;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #3498db;
+}
+
+/* Главная секция */
+#home {
+    background: linear-gradient(to right, #2c3e50, #4a6491);
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+/* О себе */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.about-content h3 {
+    font-size: 1.5rem;
+    margin: 30px 0 20px;
+    color: #2c3e50;
+}
+
+/* Списки с чекбоксами */
+.info-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.info-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #3498db;
+    border-radius: 3px;
+    margin-right: 12px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.checkbox::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #3498db;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Работы */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.work-item {
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.work-img {
+    height: 200px;
+    width: 100%;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 1.1rem;
+}
+
+.work-content {
+    padding: 20px;
+}
+
+.work-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+/* Достижения и документы */
+.achievements-grid, .documents-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.achievement-item, .document-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.achievement-item h3, .document-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Я гражданин */
+.citizen-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.citizen-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Дополнительная информация */
+.additional-info {
+    margin-top: 50px;
+}
+
+.additional-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Футер */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.copyright {
+    margin-top: 30px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
